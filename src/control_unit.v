@@ -1,5 +1,3 @@
-`include "typedec.v"
-`include "controldecode.v"
 module control_unit (op,func3,func7,reg_write,op_b,op_a,alu_control,Auipc,Lui,Jal,Jalr,imm_sel,mem_to_reg,loadout,s,en,Branch);
 input wire [6:0] op;
 input wire  [2:0]func3;

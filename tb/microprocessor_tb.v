@@ -6,7 +6,7 @@ module microprocessor_tb();
     reg en;
     wire[31:0] res_o;
 
-    microprocessor u_microprocessor(
+    Microprocessor u_microprocessor(
         .clk(clk),
         .rst(rst),
         .en(en)
@@ -14,20 +14,20 @@ module microprocessor_tb();
 
     initial begin
         clk = 0;
-        rst = 0;
+        rst = 1;
         en = 0;
         #10;
-        rst=1;
+        rst=0;
         #10;
 
         rst = 1;
-        #40;
-        #40;
+        #140;
+       
 
         $finish;       
     end
      initial begin
-       $dumpfile("microprocessor.vcd");
+       $dumpfile("temp/microprocessor.vcd");
        $dumpvars(0,microprocessor_tb);
     end
 

@@ -1,11 +1,11 @@
-module regfile (clk,en,in,rst,rs1,rs2,rd,op1,op2);
+module regfile (clk,en,instruction,rst,rs1,rs2,rd,op1,op2);
 input wire clk;
 input wire en;
 input wire rst;
 input wire [4:0] rs1;
 input wire [4:0] rs2;
 input wire [4:0] rd;
-input wire [31:0]in;
+input wire [31:0]instruction;
 output wire [31:0] op1;
 output wire [31:0] op2;
 
@@ -20,7 +20,7 @@ always @(posedge clk or negedge rst)begin
         end
     end
     else if (en) begin 
-        reg_file[rd]<=in;
+        reg_file[rd]<=instruction;
     end
 end
 
