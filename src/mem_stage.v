@@ -13,7 +13,7 @@ module mem_stage(
     output wire [31:0]wrap_load_out,
     output wire [31:0]wrap_out,
     output wire [3:0]mask,
-    output reg mem_req,
+    output reg mem_request,
     output reg we_re
 
     );
@@ -32,8 +32,14 @@ module mem_stage(
         .masking (mask)
     );
 
-    always @ (*)begin
-     mem_req = load | en;
-     we_re = en;
+    always @ (*) begin
+        if (!valid) begin
+            mem_request = 0;
+            we_re = 0;
+        end
+        else begin
+            mem_request = load | en ;
+            we_re = en ;
+        end
     end
 endmodule

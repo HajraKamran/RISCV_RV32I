@@ -20,4 +20,6 @@ ${CORE_ROOT}/src/regfile.v
 ${CORE_ROOT}/src/typedec.v
 ${CORE_ROOT}/src/wrapmem.v
 ${CORE_ROOT}/src/write_back.v
+${CORE_ROOT}/src/instruc_mem_top.v
+${CORE_ROOT}/src/datamem_top.v
 
