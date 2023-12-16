@@ -45,13 +45,15 @@ module core(
         wire instruction_memory_request;
         wire [31:0] instruction_out;
         wire [31:0] pre_address;
+        wire [31:0] pre_address_fetch;
+        wire [31:0] instruc;
 
     fetch u_fetch(
         .clk(clk),
         .rst(rst),
         .load(load),
         .instruction(instruction),
-        .address_in(address_in),
+        .address_in(0),// pc address 0 beacuse 
         .res_o(res_o),
         .Branch(branch_result),
         .Jal(Jal),
@@ -61,7 +63,7 @@ module core(
         .mem_request(instruction_memory_request),
         .we_re(instruc_mem_we_re),
         .instruction_out(instruction_out),
-        .pre_address(pre_address),
+        .pre_address(pre_address_fetch),
         .mask(instruc_mask_signal)
         
     );
@@ -74,7 +76,7 @@ module core(
     decode u_decode(
         .clk(clk),
         .rst(rst),
-        .instruction(instruction),
+        .instruction(instruc),
         .address_out(pre_address),
         .wb_mux_out(wb_mux_out),
         .load(load),
@@ -126,6 +128,15 @@ module core(
         .adder_out(adder_out),
         .rd_sel(mem_to_reg),
         .wb_mux_out(wb_mux_out)
+    );
+
+
+    fetch_pipeline u_fetch_pipline(
+        .clk(clk),
+        .instruction_fetch(instruction_out),
+        .pc_pre_address(pre_address_fetch),
+        .instruction(instruc),
+        .pre_address(pre_address)
     );
 
     

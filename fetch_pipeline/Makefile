@@ -1,4 +1,4 @@
-export CORE_ROOT=/home/hajra/RISCV_RV32I
+export CORE_ROOT=/home/hajra/RISCV_RV32I/fetch_pipeline
 
 all: icarus
 
