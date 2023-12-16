@@ -1,4 +1,4 @@
-export CORE_ROOT=/home/hajra/RISCV_RV32I
+export CORE_ROOT=/home/hajra/RISCV_RV32I/single_cycle
 
 all: icarus
 
