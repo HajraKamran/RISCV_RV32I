@@ -8,7 +8,7 @@ This repository contains the implementation of a single cycle processor based on
 
 - **RISC-V ISA**: Implements the RISC-V instruction set architecture, providing a standard interface for software development.
 - **Single Cycle Execution**: Each instruction is executed in a single clock cycle, simplifying the control logic and enabling a straightforward implementation.
-- **Verilog Implementation**: The processor design is implemented using Verilog HDL, making it easy to simulate and synthesize using industry-standard EDA tools.
+- **Verilog Implementation**: The processor design is implemented using Verilog HDL, making it easy to simulate and synthesize.
 
 ## Getting Started
 
