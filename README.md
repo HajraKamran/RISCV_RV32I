@@ -1,4 +1,4 @@
-RISC-V Single Cycle Processor
+_ _RISC-V Single Cycle Processor_ _
 Welcome to the RISC-V Single Cycle Processor repository!
 
 This repository contains the implementation of a single cycle processor based on the RISC-V instruction set architecture. The single cycle processor design provides a simple yet effective model for understanding the fundamental concepts of processor architecture and design.
