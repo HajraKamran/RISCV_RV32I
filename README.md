@@ -17,7 +17,7 @@ To get started with the RISC-V Single Cycle Processor, follow these steps:
 1. **Clone the Repository**: Clone this repository to your local machine using:
 
     ```
-    git clone https://github.com/your-username/riscv-single-cycle-processor.git
+    git clone https://github.com/HajraKamran/riscv-single-cycle-processor.git
     ```
 
 2. **Simulate the Design**: Simulate the processor design using a Verilog simulator such as ModelSim or Icarus Verilog. You can find the testbench files in the `sim` directory.
