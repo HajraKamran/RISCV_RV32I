@@ -20,33 +20,18 @@ To get started with the RISC-V Single Cycle Processor, follow these steps:
     git clone https://github.com/HajraKamran/RISCV_RV32I.git
     ```
 
-2. **Simulate the Design**: Simulate the processor design using a Verilog simulator such as ModelSim or Icarus Verilog. You can find the testbench files in the `sim` directory.
+2. **Simulate the Design**: Simulate the processor design using a Verilog simulator such as ModelSim or Icarus Verilog.
+   
 
-3. **Synthesize the Design**: Synthesize the Verilog code using synthesis tools like Synopsys Design Compiler or Xilinx Vivado for FPGA implementation.
+3. **Explore the Code**: Dive into the Verilog source code to understand the implementation details of the RISC-V single cycle processor. Feel free to modify and experiment with the design.
 
-4. **Explore the Code**: Dive into the Verilog source code to understand the implementation details of the RISC-V single cycle processor. Feel free to modify and experiment with the design.
 
-## Directory Structure
+## Contributions
 
-The repository is organized as follows:
+Contributions to the RISC-V Single Cycle Processor project are welcome! If you have ideas for improvements, bug fixes, or new features, feel free to open an issue or submit a pull request. 
 
-- **`rtl`**: Contains the Verilog source files for the RISC-V single cycle processor implementation.
-- **`sim`**: Contains the testbench files and simulation scripts for verifying the processor design.
-- **`docs`**: Contains documentation files related to the processor design.
 
-## Contributing
 
-Contributions to the RISC-V Single Cycle Processor project are welcome! If you have ideas for improvements, bug fixes, or new features, feel free to open an issue or submit a pull request. Make sure to follow the contribution guidelines outlined in the `CONTRIBUTING.md` file.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-We would like to thank the RISC-V community for developing and maintaining the RISC-V instruction set architecture, which serves as the foundation for this project.
 
 ---
-
-Feel free to customize this README according to your specific project details and requirements. Happy coding! 🚀
 
