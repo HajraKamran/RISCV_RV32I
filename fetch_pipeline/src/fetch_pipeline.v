@@ -9,6 +9,19 @@
 
          reg [31:0] pre_address_reg , instruction_reg;
 
+         //flushing pipling to remove the 2 cycles delay
+
+
+          always @ (posedge clk)begin
+
+               if(Jal|Jalr|branch_result)begin 
+                    instruction <= 32'b0;
+                    pre_address <= 32'b0;
+                    
+
+          end
+          end
+
 
          always @ (posedge clk) begin
                 pre_address_reg <= pc_pre_address;
