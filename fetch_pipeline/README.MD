@@ -30,16 +30,16 @@ The project is organized as follows:
 To get started with this project, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/HajraKamran/RISCV_RV32I/tree/master/fetch_pipeline.git
+git clone git@github.com:HajraKamran/RISCV_RV32I.git
 ```
 ## Contributing
 
 Contributions to this project are welcome. To contribute, follow these steps:
 
 1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/new-feature`).
+2. Create a new branch 
 3. Make your changes.
-4. Commit your changes (`git commit -am 'Add new feature'`).
-5. Push to the branch (`git push origin feature/new-feature`).
+4. Commit your changes (`git commit -m 'Add new feature'`).
+5. Push to the branch (`git push origin master/main).
 6. Create a new Pull Request.
 
