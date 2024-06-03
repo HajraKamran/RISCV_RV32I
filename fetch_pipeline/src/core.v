@@ -73,6 +73,17 @@ module core(
     assign address_out = pc_address_out;
 
 
+    fetch_pipeline u_fetch_pipline(
+        .clk(clk),
+        .rst(rst),
+        .instruction_fetch(instruction_out),
+        .pc_pre_address(pre_address_fetch),
+        .instruction(instruc),
+        .pre_address(pre_address)
+    );
+
+
+
     decode u_decode(
         .clk(clk),
         .rst(rst),
@@ -130,14 +141,6 @@ module core(
         .wb_mux_out(wb_mux_out)
     );
 
-
-    fetch_pipeline u_fetch_pipline(
-        .clk(clk),
-        .instruction_fetch(instruction_out),
-        .pc_pre_address(pre_address_fetch),
-        .instruction(instruc),
-        .pre_address(pre_address)
-    );
 
     
 

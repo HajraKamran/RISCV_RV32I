@@ -1,5 +1,6 @@
     module fetch_pipeline(
          input wire clk,
+         input wire rst,
          input wire [31:0] instruction_fetch,
          input wire [31:0] pc_pre_address,
          input wire Jal,
@@ -16,20 +17,24 @@
          //flushing pipling to remove the 2 cycles delay
 
 
-          always @ (posedge clk)begin
-
+          always @ (posedge clk  or negedge rst)begin
+            if (!rst)begin
+               instruction_reg <= 32'b0;
+               pre_address_reg <= 32'b0;  
+          end
+          else begin
                if(Jal|Jalr|branch_result)begin 
                     instruction_reg <= 32'b0;
                     pre_address_reg <= 32'b0;
                     flush_pipeline <= 1; // Set flag to flush for one cycle
-          end
-          else begin
-               if (flush_pipeline) begin
+               end
+              else if (flush_pipeline) begin
                // Stall the pipeline for one additional cycle after flushing
                     instruction_reg <= 32'b0;
                     pre_address_reg <= 32'b0;
                     flush_pipeline <= 0; // Reset flag after one cycle stall
           end
+            
           else if (load) begin
                //stall pipeline
                pre_address_reg <= pre_address;
